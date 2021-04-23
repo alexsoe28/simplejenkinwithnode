@@ -1,14 +1,16 @@
 pipeline {
     agent any
+    tools {nodejs "MyNode"}
     stages{
         stage("build") {
             steps {
-              echo "This is build phase"
+              echo "node --version"
+              echo "npm --version"
             }
         }
         stage ("Test") {
             steps {
-                echo "Test phase running"
+                echo "node app.js"
             }
         }
         stage ("Deploy") {
