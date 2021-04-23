@@ -11,7 +11,7 @@ pipeline {
         }
         stage ("Test") {
             steps {
-                sh "node express_app.js"
+                sh "node app.js"
             }
         }
         stage ("Deploy") {
