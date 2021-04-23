@@ -4,13 +4,13 @@ pipeline {
     stages{
         stage("build") {
             steps {
-              echo "node --version"
-              echo "npm --version"
+              sh "node --version"
+              sh "npm --version"
             }
         }
         stage ("Test") {
             steps {
-                echo "node app.js"
+                sh "node app.js"
             }
         }
         stage ("Deploy") {
