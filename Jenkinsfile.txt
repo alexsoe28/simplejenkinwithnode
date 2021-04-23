@@ -4,18 +4,18 @@ pipeline {
 	stages {
 		stage("Check Node Version"){
 			steps {
-			"node --version"
+			cmd "node --version"
 			}
 		}
 		stage("install dependencies"){
 			steps {
-			"npm --version"
-			"npm install"
+			cmd "npm --version"
+			cmd "npm install"
 			}
 		}
 		stage("Test"){
 			steps {
-			"node app.js"
+			cmd "node app.js"
 		}
 		}
 		stage("Release the version"){
