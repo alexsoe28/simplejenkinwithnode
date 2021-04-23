@@ -6,11 +6,12 @@ pipeline {
             steps {
               sh "node --version"
               sh "npm --version"
+              sh "npm install"
             }
         }
         stage ("Test") {
             steps {
-                sh "node app.js"
+                sh "node server.js"
             }
         }
         stage ("Deploy") {
